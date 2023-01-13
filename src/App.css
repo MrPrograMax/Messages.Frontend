@@ -4,6 +4,14 @@
   min-height: 100vh;
 }
 
+.YourMessages {
+  width: 50%;
+}
+
+.GetMessage {
+  width: 50%;
+}
+
 .firstButtton {
   margin-top: 25px;
   margin-bottom: 25px;

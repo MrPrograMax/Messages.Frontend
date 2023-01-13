@@ -25,7 +25,7 @@ const MessageList: FC<{}> = (): ReactElement => {
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             const message: CreateMessageDto = {
-                title: event.currentTarget.value,
+                title: "-",
                 text: event.currentTarget.value,
             };
             createMessage(message);
@@ -35,10 +35,10 @@ const MessageList: FC<{}> = (): ReactElement => {
     };
 
     return (
-        <div>
+        <div className='YourMessages'>
             Your message
             <div>
-                Title: <FormControl ref={textInput} onKeyPress={handleKeyPress} />
+                Text: <FormControl ref={textInput} onKeyPress={handleKeyPress} />
             </div>
             <section className='mainsec'>
             <br/>

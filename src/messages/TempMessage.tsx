@@ -25,7 +25,8 @@ const MessageList: FC<{}> = (): ReactElement => {
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             const message: CreateMessageDto = {
-                title: event.currentTarget.value,
+                title: "-",
+                text: event.currentTarget.value,
             };
             createMessage(message);
             event.currentTarget.value = '';
@@ -34,7 +35,7 @@ const MessageList: FC<{}> = (): ReactElement => {
     };
 
     return (
-        <div>
+        <div className='GetMessage'>
             Messages
             <div>
                 <br/>
